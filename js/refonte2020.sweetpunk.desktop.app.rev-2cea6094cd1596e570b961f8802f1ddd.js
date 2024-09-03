@@ -5312,7 +5312,7 @@
             , l = {
             common: [{
                 id: "uv",
-                src: "".concat(c, "/images/gl/uv.jpg")
+                src: "".concat("/images/uv.png")
             }],
             home: [],
             dbb: [{
@@ -6042,13 +6042,13 @@
                                 e.brushLoaded = !0
                             }
                             ,
-                            Object(i.b)("brush") ? this.brush.src = "/wp-content/themes/sweetpunk/library/medias/images/gl/brush-test/brush".concat(Object(i.b)("brush"), ".png") : this.brush.src = "/wp-content/themes/sweetpunk/library/medias/images/gl/brush2.png",
+                            Object(i.b)("brush") ? this.brush.src = "/wp-content/themes/sweetpunk/library/medias/images/gl/brush-test/brush".concat(Object(i.b)("brush"), ".png") : this.brush.src = "/images/brush2.png",
                             this.brush2 = new Image,
                             this.brush2.onload = function() {
                                 e.brush2Loaded = !0
                             }
                             ,
-                            this.brush2.src = "/wp-content/themes/sweetpunk/library/medias/images/gl/brush2.png",
+                            this.brush2.src = "/images/brush2.png",
                         Object(i.b)("canvas") && (document.body.appendChild(this.canvas),
                             this.canvas.style.position = "fixed",
                             this.canvas.style.top = "100px",
@@ -51255,6 +51255,17 @@
                     r.configurable = !0,
                 "value"in r && (r.writable = !0),
                     Object.defineProperty(t, r.key, r)
+            }
+        }
+        if (s.b.registerPlugin(u.a),
+            x.a.init(navigator.userAgent),
+        "ie" === window.ENV.browser || "edge" === window.ENV.browser) {
+            var S = HTMLElement.prototype.getBoundingClientRect;
+            HTMLElement.prototype.getBoundingClientRect = function() {
+                var t = S.apply(this, arguments);
+                return t.x = t.left,
+                    t.y = t.top,
+                    t
             }
         }
         if (Object(f.b)("vimeo")) {
