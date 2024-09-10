@@ -256,7 +256,7 @@
             font-size: var(--wp--preset--font-size--large) !important;
         }
 
-        #myVideo {
+        #myVideo, #myVideo2 {
             position: absolute;
             top: 50%;
             left: 50%;
@@ -334,24 +334,23 @@
         window.plausible = window.plausible || function () {
             (window.plausible.q = window.plausible.q || []).push(arguments)
         }
-        document.querySelector(".js-dont-be-boring").onclick = function () {
-            plausible('Clicked on "Don\'t be boring" in footer');
-        };
+        // document.querySelector(".js-dont-be-boring").onclick = function () {
+        //     plausible('Clicked on "Don\'t be boring" in footer');
+        // };
     </script>
 
 </head>
 
-<body class="chrome desktop is-gpu-1 os-osx browser-chrome is-desktop dom-content-loaded is-webgl">
+<body class="safari desktop">
 
 <div class="loader">
     <span class="js-count"></span>
 </div>
 
 <div class="screen-transition">
-    <span class="js-screen-transition-txt txt-screen title-hecto">Sweet</span>
-    <div class="js-screen-transition-bar screen-transition__bar">
-        <div class="js-screen-transition-progress screen-transition__progress"></div>
-    </div>
+    <video autoplay muted loop id="myVideo2">
+        <source src="/transition-demo/videos/preloader.mp4" type="video/mp4">
+    </video>
 </div>
 
 <script>
@@ -565,11 +564,11 @@
         </span>
                     </div>
 
-                    <div class="hp-header__scroll js-scroll">
-                        <div class="hp-header__scroll-icon js-scroll-el"></div>
-                        <div class="hp-header__scroll-icon js-scroll-el"></div>
-                        <div class="hp-header__scroll-icon js-scroll-el"></div>
-                    </div>
+<!--                    <div class="hp-header__scroll js-scroll">-->
+<!--                        <div class="hp-header__scroll-icon js-scroll-el"></div>-->
+<!--                        <div class="hp-header__scroll-icon js-scroll-el"></div>-->
+<!--                        <div class="hp-header__scroll-icon js-scroll-el"></div>-->
+<!--                    </div>-->
                 </div>
 
 
